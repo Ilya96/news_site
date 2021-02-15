@@ -1,0 +1,34 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <title>{% block title %}News from all over the world{% endblock %}</title>
+  </head>
+  <body>
+
+  {% include 'inc/_nav.html' %}
+
+  <h1>{% block head %}News from all over the world{% endblock %}</h1>
+
+  <div class="container mt-3">
+      <div class="row">
+          <div class="col-md-4">
+              {% block sidebar %}SIDEBAR{% endblock %}
+          </div>
+          <div class="col-md-4">
+              {% block content %}CONTENT{% endblock %}
+          </div>
+      </div>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </div>
+
+  </body>
+</html>

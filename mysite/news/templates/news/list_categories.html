@@ -1,0 +1,6 @@
+<div class="list-group">
+    {{ arg_first }} {{ arg_second }}
+    {% for i in categories %}
+        <a href="{{ i.get_absolute_url }}" class="list-group-item list-group-item-action">{{ i.title }}</a>
+    {% endfor %}
+</div>
